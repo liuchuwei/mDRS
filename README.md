@@ -6,4 +6,6 @@
 [![](https://img.shields.io/badge/Minimap2-v2.24-green)](https://github.com/lh3/minimap2)
 [![](https://img.shields.io/badge/samtools-v1.1.6-green)](https://github.com/samtools/samtools)  
 [![](https://img.shields.io/badge/DRUMMER-v1.0-blue)](https://github.com/DepledgeLab/DRUMMER/)
-[![](https://img.shields.io/badge/bedtools-v2.29.1-blue)](https://github.com/DepledgeLab/DRUMMER/)
+[![](https://img.shields.io/badge/bedtools-v2.29.1-blue)](https://bedtools.readthedocs.io/en/latest/)
+[![](https://img.shields.io/badge/ELIGOS-v2.0.1-blue)](https://gitlab.com/piroonj/eligos2)
+
