@@ -12,10 +12,10 @@
 [![](https://img.shields.io/badge/MINES-v0.0-orange)](https://github.com/YeoLab/MINES.git)
 [![](https://img.shields.io/badge/Tombo-v1.5.1-orange)](https://github.com/nanoporetech/tombo)
 [![](https://img.shields.io/badge/Nanocompore-v1.0.0-orange)](https://github.com/tleonardi/nanocompore_paper_analyses)
-[![](https://img.shields.io/badge/Nanom6A-v2.0-orange)](https://github.com/gaoyubang/nanom6A)
-[![](https://img.shields.io/badge/Xpore-v2.0-orange)](https://github.com/GoekeLab/xpore)
-[![](https://img.shields.io/badge/m6Anet-v1.0-orange)](https://github.com/GoekeLab/m6anet)
-[![](https://img.shields.io/badge/nanopolish-v0.14.0-orange)](https://github.com/jts/nanopolish)
+[![](https://img.shields.io/badge/Nanom6A-v2.0-orange)](https://github.com/gaoyubang/nanom6A)  
+[![](https://img.shields.io/badge/Xpore-v2.0-purple)](https://github.com/GoekeLab/xpore)
+[![](https://img.shields.io/badge/m6Anet-v1.0-purple)](https://github.com/GoekeLab/m6anet) 
+[![](https://img.shields.io/badge/nanopolish-v0.14.0-purple)](https://github.com/jts/nanopolish)
 
 
 
