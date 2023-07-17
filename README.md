@@ -15,6 +15,8 @@
 [![](https://img.shields.io/badge/Nanom6A-v2.0-orange)](https://github.com/gaoyubang/nanom6A)
 [![](https://img.shields.io/badge/Xpore-v2.0-orange)](https://github.com/GoekeLab/xpore)
 [![](https://img.shields.io/badge/m6Anet-v1.0-orange)](https://github.com/GoekeLab/m6anet)
+[![](https://img.shields.io/badge/nanopolish-v0.14.0-orange)](https://github.com/jts/nanopolish)
+
 
 
 
