@@ -16,7 +16,9 @@
 [![](https://img.shields.io/badge/Xpore-v2.0-purple)](https://github.com/GoekeLab/xpore)
 [![](https://img.shields.io/badge/m6Anet-v1.0-purple)](https://github.com/GoekeLab/m6anet) 
 [![](https://img.shields.io/badge/nanopolish-v0.14.0-purple)](https://github.com/jts/nanopolish)  
-[![](https://img.shields.io/badge/Dinopore-v0.1.0-brown)](https://github.com/darelab2014/Dinopore)
+[![](https://img.shields.io/badge/Dinopore-v1.0-brown)](https://github.com/darelab2014/Dinopore)
+[![](https://img.shields.io/badge/nanoRMS-v1.0-brown)](https://github.com/novoalab/nanoRMS)
+
 
 
 
