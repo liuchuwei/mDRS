@@ -19,6 +19,11 @@
 [![](https://img.shields.io/badge/Dinopore-v1.0-brown)](https://github.com/darelab2014/Dinopore)
 [![](https://img.shields.io/badge/nanoRMS-v1.0-brown)](https://github.com/novoalab/nanoRMS)
 
+## genome
+[![](https://img.shields.io/badge/mm39-orange)](https://hgdownload.soe.ucsc.edu/goldenPath/mm39/bigZips/)
+[![](https://img.shields.io/badge/hg38-green)](https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/)
+
+
 
 
 
