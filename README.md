@@ -4,7 +4,7 @@
 ![](https://img.shields.io/badge/software-version-blue)  
 [![](https://img.shields.io/badge/Guppy-v6.5.7-green)](https://community.nanoporetech.com/downloads)
 [![](https://img.shields.io/badge/Minimap2-v2.24-green)](https://github.com/lh3/minimap2)
-[![](https://img.shields.io/badge/samtools-v1.1.6-green)](https://github.com/samtools/samtools)  
+[![](https://img.shields.io/badge/samtools-v1.1.7-green)](https://github.com/samtools/samtools)  
 [![](https://img.shields.io/badge/DRUMMER-v1.0-blue)](https://github.com/DepledgeLab/DRUMMER/)
 [![](https://img.shields.io/badge/bedtools-v2.29.1-blue)](https://bedtools.readthedocs.io/en/latest/)
 [![](https://img.shields.io/badge/ELIGOS-v2.0.1-blue)](https://gitlab.com/piroonj/eligos2)
@@ -38,12 +38,16 @@
 </details>
 
 ## Intallation
-
-
-## Usage
-1.Preprocess
+1.Install environment: check the env directory of yml files
    ```sh
-   git clone https://github.com/liuchuwei/PGLCN.git
+   conda env create -f $environment.yml
+   ```
+2.prepare tookit: check and modify the tookit.py file.
+    
+## Usage
+1.Basecalling
+   ```sh
+   python 01.basecalling.py -i $fast5 -o $out
    ```
 2.m6A detection
    ```sh
