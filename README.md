@@ -49,7 +49,26 @@
    ```sh
    python 01.basecalling.py -i $fast5 -o $out
    ```
-2.m6A detection
+2.Minimap
+   ```sh
+   python 02.minimap.py -i $fastq -o $out -r $fasta
+   ```
+4.Get eventalign
+    
+Get eventalign for m6Anet methods
+   ```sh
+   python 03.get_eventalign.py -f $fast5 -o $output -fq $fastq -r $fasta -bam $bam -method m6A_net
+   ```
+
+Get eventalign for Nanocompore methods
+   ```sh
+   python 03.get_eventalign.py -f $fast5 -o $output -fq $fastq -r $fasta -bam $bam -method Nanocompore
+   ```
+5.Resguiggle
+   ```sh
+   python 02.minimap.py -i $fastq -o $out -r $fasta
+   ```
+6.m6A detection
    ```sh
    git clone https://github.com/liuchuwei/PGLCN.git
    ```

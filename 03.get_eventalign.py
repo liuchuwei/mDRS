@@ -13,6 +13,7 @@ parser.add_argument('-fq', '--fastq', required=True, help="directory of fastq fi
 parser.add_argument('-r', '--reference', required=True, help="directory of reference files")
 parser.add_argument('-bam', '--bam', required=True, help="directory of bam files")
 parser.add_argument('-o', '--output', required=True, help="output files")
+parser.add_argument('-method', '--method', required=True, help="m6A_net or Nanocompore")
 args = parser.parse_args(sys.argv[1:])
 global FLAGS
 FLAGS = args
@@ -48,12 +49,24 @@ for item in dirs_list:
     if not os.path.exists(item):
         os.mkdir(item)
 
-cmd = "%s eventalign --reads %s \
---bam %s \
---genome %s \
---scale-events  \
---signal-index  \
---summary %s \
---threads 50 > %s" % (tools.nanopolish, merge_fastq, FLAGS.bam, FLAGS.reference, summary_fl, FLAGS.output)
+if FLAGS.method == "m6a_net":
+    cmd = "%s eventalign --reads %s \
+    --bam %s \
+    --genome %s \
+    --scale-events  \
+    --signal-index  \
+    --summary %s \
+    --threads 50 > %s" % (tools.nanopolish, merge_fastq, FLAGS.bam, FLAGS.reference, summary_fl, FLAGS.output)
+elif FLAGS.method == "Nanocompore":
+    cmd = "%s eventalign --reads %s \
+    --bam %s \
+    --genome %s\
+    --samples \
+    --print-read-names \
+    --scale-events  \
+    --signal-index  \
+    --summary %s \
+    --threads 50 > %s" % (tools.nanopolish, merge_fastq, FLAGS.bam, FLAGS.reference, summary_fl, FLAGS.output)
+
 os.system(cmd)
 
