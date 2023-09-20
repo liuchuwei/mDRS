@@ -1,6 +1,6 @@
 # mDRS
 
-## dependence
+## Dependence
 ![](https://img.shields.io/badge/software-version-blue)  
 [![](https://img.shields.io/badge/Guppy-v6.5.7-green)](https://community.nanoporetech.com/downloads)
 [![](https://img.shields.io/badge/Minimap2-v2.24-green)](https://github.com/lh3/minimap2)
@@ -19,12 +19,43 @@
 [![](https://img.shields.io/badge/Dinopore-v1.0-brown)](https://github.com/darelab2014/Dinopore)
 [![](https://img.shields.io/badge/nanoRMS-v1.0-brown)](https://github.com/novoalab/nanoRMS)
 
-## genome
+## Genome
 [![](https://img.shields.io/badge/mm39-orange)](https://hgdownload.soe.ucsc.edu/goldenPath/mm39/bigZips/)
 [![](https://img.shields.io/badge/hg38-green)](https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/)
 
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#Intallation">Intallation</a>
+    </li>
+    <li><a href="#Usage">Usage</a></li>
+    <li><a href="#References">References</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#Contact">Contact</a></li>
+  </ol>
+</details>
+
+## Intallation
 
 
+## Usage
+1.Preprocess
+   ```sh
+   git clone https://github.com/liuchuwei/PGLCN.git
+   ```
+2.m6A detection
+   ```sh
+   git clone https://github.com/liuchuwei/PGLCN.git
+   ```
 
+## License
+Distributed under the GPL-2.0 License License. See LICENSE for more information.
+
+## Contact
+liuchw3@mail2.sysu.edu.cn
+
+## Reference
 
 
