@@ -40,7 +40,7 @@ for item in dirs_list:
 if fsize > 10:
 
     cmd = "%s -i %s -s %s -t 40 --recursive" % (tools.multi_to_single_fast5, FLAGS.fast5, single_out)
-    # os.system(cmd)
+    os.system(cmd)
 
     FLAGS.fast5 = single_out
 
@@ -49,7 +49,7 @@ if fsize > 10:
     --fast5-basedir %s \
     --fastq-filenames %s \
     --overwrite \
-    --processes 8" % (tools.tombo, FLAGS.output, FLAGS.fastq)
+    --processes 8" % (tools.tombo, FLAGS.fast5, FLAGS.fastq)
     os.system(cmd)
 
 else:

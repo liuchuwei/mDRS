@@ -13,4 +13,4 @@ class Tookits(object):
         self.multi_to_single_fast5 = "~/anaconda3/envs/mDRS/bin/multi_to_single_fast5"
         self.removel_fail_fast = "remove_failed_fast5.R"
 
-        self.tombo = "~/anaconda3/envs/tombo/bin/tombo"
+        self.tombo = "~/anaconda3/bin/tombo"
