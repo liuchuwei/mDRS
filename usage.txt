@@ -1,0 +1,47 @@
+# modified from: https://github.com/zhongzhd/ont_m6a_detection
+# ------------------preprocess---------------------
+# 01.basecalling
+python 01.basecalling.py -i <directory of fast5 files> -o <output directory>
+
+# 02.minimap
+python 02.minimap.py -i <directory of fastq files> -o <output directory> -r <path of reference>
+
+# 03.get_eventalign
+python 03.get_eventalign.py -f <directory of fast5 files> -o <output directory> \
+ -fq <path of fastq> -r <path of reference> -bam <path of bam files> -o <output directory>
+
+# 04.resquiggle
+## preprocess
+python 04.resquiggle_pre.py -f <directory of fast5 files> -o <output directory>
+
+## annotate_raw_with_fastqs
+04.resquiggle.py preprocess annotate_raw_with_fastqs
+--fast5-basedir <directory of fast5 files>
+--fastq-filenames <path of merge fastq>
+--overwrite
+--processes 8
+
+04.resquiggle.py preprocess annotate_raw_with_fastqs
+--fast5-basedir data/basecall/ATI_cc_unmod/single
+--fastq-filenames data/basecall/ATI_cc_unmod/merge.fastq
+--overwrite
+--processes 8
+
+## resquiggling
+04.resquiggle.py resquiggle <directory of fast5 files> <directory of reference> \
+--rna \
+--corrected-group RawGenomeCorrected_000 \
+--basecall-group Basecall_1D_000 \
+--overwrite \
+--processes 16 \
+--fit-global-scale \
+--include-event-stdev
+
+04.resquiggle.py resquiggle data/basecall/ATI_cc_unmod/single data/cc_ref.fa
+--rna
+--corrected-group RawGenomeCorrected_000
+--basecall-group Basecall_1D_000
+--overwrite
+--processes 16
+--fit-global-scale
+--include-event-stdev

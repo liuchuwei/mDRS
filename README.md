@@ -4,7 +4,7 @@
 ![](https://img.shields.io/badge/software-version-blue)  
 [![](https://img.shields.io/badge/Guppy-v6.5.7-green)](https://community.nanoporetech.com/downloads)
 [![](https://img.shields.io/badge/Minimap2-v2.24-green)](https://github.com/lh3/minimap2)
-[![](https://img.shields.io/badge/samtools-v1.1.7-green)](https://github.com/samtools/samtools)  
+[![](https://img.shields.io/badge/samtools-v1.16.1-green)](https://github.com/samtools/samtools)  
 [![](https://img.shields.io/badge/DRUMMER-v1.0-blue)](https://github.com/DepledgeLab/DRUMMER/)
 [![](https://img.shields.io/badge/bedtools-v2.29.1-blue)](https://bedtools.readthedocs.io/en/latest/)
 [![](https://img.shields.io/badge/ELIGOS-v2.0.1-blue)](https://gitlab.com/piroonj/eligos2)
@@ -51,9 +51,10 @@
    ```
 2.Minimap
    ```sh
+   conda activate mDRS
    python 02.minimap.py -i $fastq -o $out -r $fasta
    ```
-4.Get eventalign
+3.Get eventalign
     
 Get eventalign for m6Anet methods
    ```sh
@@ -64,11 +65,12 @@ Get eventalign for Nanocompore methods
    ```sh
    python 03.get_eventalign.py -f $fast5 -o $output -fq $fastq -r $fasta -bam $bam -method Nanocompore
    ```
-5.Resguiggle
+4.Resguiggle
    ```sh
-   python 02.minimap.py -i $fastq -o $out -r $fasta
+   cat *.fastq > merge.fastq
+   python python 04.resquiggle.py -f $fast5 -o $output -fq merge.fastq -r $fasta
    ```
-6.m6A detection
+5.m6A detection
    ```sh
    git clone https://github.com/liuchuwei/PGLCN.git
    ```

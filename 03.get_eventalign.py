@@ -24,14 +24,17 @@ pass_fastq = FLAGS.fastq
 merge_fastq = "/".join(pass_fastq.split("/")[0:-1]) + "/merge.fastq"
 pass_fastq = pass_fastq + "/*.fastq"
 cmd = "cat %s > %s" % (pass_fastq, merge_fastq)
-os.system(cmd)
+if not os.path.exists(merge_fastq):
+    os.system(cmd)
 
 #index samples
 print("nanopolish index samples...")
 from tookit import Tookits
 tools = Tookits()
 cmd = "%s index -d %s %s" % (tools.nanopolish, FLAGS.fast5, merge_fastq)
-os.system(cmd)
+
+if not os.path.exists(merge_fastq+".index"):
+    os.system(cmd)
 
 #eventalign with samples
 print("nanopolish eventalign samples...")
@@ -49,14 +52,14 @@ for item in dirs_list:
     if not os.path.exists(item):
         os.mkdir(item)
 
-if FLAGS.method == "m6a_net":
+if FLAGS.method == "m6A_net":
     cmd = "%s eventalign --reads %s \
     --bam %s \
     --genome %s \
     --scale-events  \
     --signal-index  \
     --summary %s \
-    --threads 50 > %s" % (tools.nanopolish, merge_fastq, FLAGS.bam, FLAGS.reference, summary_fl, FLAGS.output)
+    --threads 40 > %s" % (tools.nanopolish, merge_fastq, FLAGS.bam, FLAGS.reference, summary_fl, FLAGS.output)
 elif FLAGS.method == "Nanocompore":
     cmd = "%s eventalign --reads %s \
     --bam %s \
@@ -66,7 +69,7 @@ elif FLAGS.method == "Nanocompore":
     --scale-events  \
     --signal-index  \
     --summary %s \
-    --threads 50 > %s" % (tools.nanopolish, merge_fastq, FLAGS.bam, FLAGS.reference, summary_fl, FLAGS.output)
+    --threads 40 > %s" % (tools.nanopolish, merge_fastq, FLAGS.bam, FLAGS.reference, summary_fl, FLAGS.output)
 
 os.system(cmd)
 

@@ -2,8 +2,8 @@ from __future__ import unicode_literals, absolute_import
 
 import sys
 
-from Tombo.tombo import _option_parsers
-from Tombo.tombo._version import TOMBO_VERSION
+from . import _option_parsers
+from ._version import TOMBO_VERSION
 
 import argparse
 class SubcommandHelpFormatter(argparse.RawDescriptionHelpFormatter):
@@ -227,15 +227,15 @@ def main(args=None):
         parser.parse_args(save_args)
 
     if args.action_command == 'resquiggle':
-        from Tombo.tombo import resquiggle
+        from . import resquiggle
         resquiggle._resquiggle_main(args)
 
     elif args.action_command == 'annotate_raw_with_fastqs':
-        from Tombo.tombo import _preprocess
+        from . import _preprocess
         _preprocess.annotate_reads_with_fastq_main(args)
 
     elif args.service_command == 'detect_modifications':
-        from Tombo.tombo import tombo_stats
+        from . import tombo_stats
         if args.action_command == 'aggregate_per_read_stats':
             tombo_stats._aggregate_per_read_main(args)
         else:
@@ -264,7 +264,7 @@ def main(args=None):
         _filter_reads.filter_main(args)
 
     elif args.service_command == 'text_output':
-        from Tombo.tombo import _text_output_commands
+        from . import _text_output_commands
         if args.action_command == 'browser_files':
             _text_output_commands._browser_files_main(args)
         elif args.action_command == 'signif_sequence_context':
