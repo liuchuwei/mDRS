@@ -67,8 +67,7 @@ Get eventalign for Nanocompore methods
    ```
 4.Resguiggle
    ```sh
-   cat *.fastq > merge.fastq
-   python python 04.resquiggle.py -f $fast5 -o $output -fq merge.fastq -r $fasta
+   python 04.resquiggle.py -f $fast5 -o $output -fq $fastq -r $fasta
    ```
 5.m6A detection
    ```sh
